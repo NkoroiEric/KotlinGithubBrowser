@@ -1,0 +1,218 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-21:12
+MERGED from [com.android.databinding:adapters:3.1.0-alpha06] /home/scaleup/.gradle/caches/transforms-1/files-1.1/adapters-3.1.0-alpha06.aar/b752910eeda5df0c0159e2dd19a3ab19/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.1.0-alpha06] /home/scaleup/.gradle/caches/transforms-1/files-1.1/library-3.1.0-alpha06.aar/80c8111c84a3e83103cf17c0e0045f9c/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.dagger:dagger-android-support:2.11] /home/scaleup/.gradle/caches/transforms-1/files-1.1/dagger-android-support-2.11.aar/9caf8fae1cc21d7b52a9b30c34f4d5c1/AndroidManifest.xml:16:1-19:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/382cbc9adb0e5b8f93c578d940780460/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/4053cb851f0d8dd68490db85433f5a1d/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:cardview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/9c695e575cd3089c36431ab1255d6af9/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/441d5e1a70386ddaed563dc5ce4b7180/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/138cd3d0b0c4a007a32287b8ad5e222f/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.core:core-testing:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/core-testing-1.0.0.aar/70032730f31bd29a8fbcdc828b0b39fe/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.dagger:dagger-android:2.11] /home/scaleup/.gradle/caches/transforms-1/files-1.1/dagger-android-2.11.aar/af95fb14fd36d4242487781a98c79dd0/AndroidManifest.xml:16:1-19:12
+MERGED from [android.arch.persistence.room:rxjava2:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/rxjava2-1.0.0.aar/7766df164018269e4aa7b7167966a744/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.persistence.room:testing:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/testing-1.0.0.aar/dd15ac3bbe4880c3f7a508c5f798fbf2/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.persistence.room:runtime:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/401a345599e36fe4212fc53cac3c8020/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/45336687b8d35f2dc56c15bb96c7f07b/AndroidManifest.xml:17:1-32:12
+MERGED from [com.android.support:support-fragment:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/30f0b5b29e5016e62fa9dc9b51f0492b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/e93d8bed08325eb1787ab839feb04ea8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/a6f37be818a827546b1ca7cf8278de95/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b3b1a7ebcf5d2bd258c0a09e1cddddc8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/adf404190fc9136390dee72e5be6cdd4/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b4b6aecdf9d2c161b5f9ee034327c092/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9a76ef4c8b7f3dd14fdb0d7bb2c88a50/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.core:runtime:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/1f225f13a9db237b7c3c7ede326275d8/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.persistence:db-framework:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/db-framework-1.0.0.aar/ddd2d56c40651a8ffc7b9e2e4ff1bfc6/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.persistence:db:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/db-1.0.0.aar/e1dd841dd83195670734d8ad4b20a2bd/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/scaleup/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/1f272977dc779c6f71a0c5b649b96c5d/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/scaleup/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/b88c5183ed227bc69ee03551a0d21abd/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:3:5-46
+		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-21:12
+		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-21:12
+		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/382cbc9adb0e5b8f93c578d940780460/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/382cbc9adb0e5b8f93c578d940780460/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/4053cb851f0d8dd68490db85433f5a1d/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/4053cb851f0d8dd68490db85433f5a1d/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/9c695e575cd3089c36431ab1255d6af9/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/9c695e575cd3089c36431ab1255d6af9/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/441d5e1a70386ddaed563dc5ce4b7180/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/441d5e1a70386ddaed563dc5ce4b7180/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/138cd3d0b0c4a007a32287b8ad5e222f/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/138cd3d0b0c4a007a32287b8ad5e222f/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/45336687b8d35f2dc56c15bb96c7f07b/AndroidManifest.xml:24:5-30:19
+MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/45336687b8d35f2dc56c15bb96c7f07b/AndroidManifest.xml:24:5-30:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/30f0b5b29e5016e62fa9dc9b51f0492b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/30f0b5b29e5016e62fa9dc9b51f0492b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/e93d8bed08325eb1787ab839feb04ea8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/e93d8bed08325eb1787ab839feb04ea8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/a6f37be818a827546b1ca7cf8278de95/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/a6f37be818a827546b1ca7cf8278de95/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b3b1a7ebcf5d2bd258c0a09e1cddddc8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b3b1a7ebcf5d2bd258c0a09e1cddddc8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/adf404190fc9136390dee72e5be6cdd4/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/adf404190fc9136390dee72e5be6cdd4/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b4b6aecdf9d2c161b5f9ee034327c092/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b4b6aecdf9d2c161b5f9ee034327c092/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9a76ef4c8b7f3dd14fdb0d7bb2c88a50/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9a76ef4c8b7f3dd14fdb0d7bb2c88a50/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/scaleup/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/b88c5183ed227bc69ee03551a0d21abd/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/scaleup/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/b88c5183ed227bc69ee03551a0d21abd/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.scaleup.kotlingithubbrowser.MainActivity
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:16:27-74
+uses-sdk
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:3.1.0-alpha06] /home/scaleup/.gradle/caches/transforms-1/files-1.1/adapters-3.1.0-alpha06.aar/b752910eeda5df0c0159e2dd19a3ab19/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.1.0-alpha06] /home/scaleup/.gradle/caches/transforms-1/files-1.1/adapters-3.1.0-alpha06.aar/b752910eeda5df0c0159e2dd19a3ab19/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.1.0-alpha06] /home/scaleup/.gradle/caches/transforms-1/files-1.1/library-3.1.0-alpha06.aar/80c8111c84a3e83103cf17c0e0045f9c/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.1.0-alpha06] /home/scaleup/.gradle/caches/transforms-1/files-1.1/library-3.1.0-alpha06.aar/80c8111c84a3e83103cf17c0e0045f9c/AndroidManifest.xml:22:5-44
+MERGED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:21:5-23:62
+MERGED from [com.google.dagger:dagger-android-support:2.11] /home/scaleup/.gradle/caches/transforms-1/files-1.1/dagger-android-support-2.11.aar/9caf8fae1cc21d7b52a9b30c34f4d5c1/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-android-support:2.11] /home/scaleup/.gradle/caches/transforms-1/files-1.1/dagger-android-support-2.11.aar/9caf8fae1cc21d7b52a9b30c34f4d5c1/AndroidManifest.xml:18:3-42
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/382cbc9adb0e5b8f93c578d940780460/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/382cbc9adb0e5b8f93c578d940780460/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/4053cb851f0d8dd68490db85433f5a1d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/4053cb851f0d8dd68490db85433f5a1d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/9c695e575cd3089c36431ab1255d6af9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/9c695e575cd3089c36431ab1255d6af9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/441d5e1a70386ddaed563dc5ce4b7180/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/441d5e1a70386ddaed563dc5ce4b7180/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/138cd3d0b0c4a007a32287b8ad5e222f/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/138cd3d0b0c4a007a32287b8ad5e222f/AndroidManifest.xml:21:5-23:54
+MERGED from [android.arch.core:core-testing:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/core-testing-1.0.0.aar/70032730f31bd29a8fbcdc828b0b39fe/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.core:core-testing:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/core-testing-1.0.0.aar/70032730f31bd29a8fbcdc828b0b39fe/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:dagger-android:2.11] /home/scaleup/.gradle/caches/transforms-1/files-1.1/dagger-android-2.11.aar/af95fb14fd36d4242487781a98c79dd0/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-android:2.11] /home/scaleup/.gradle/caches/transforms-1/files-1.1/dagger-android-2.11.aar/af95fb14fd36d4242487781a98c79dd0/AndroidManifest.xml:18:3-42
+MERGED from [android.arch.persistence.room:rxjava2:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/rxjava2-1.0.0.aar/7766df164018269e4aa7b7167966a744/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence.room:rxjava2:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/rxjava2-1.0.0.aar/7766df164018269e4aa7b7167966a744/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence.room:testing:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/testing-1.0.0.aar/dd15ac3bbe4880c3f7a508c5f798fbf2/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence.room:testing:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/testing-1.0.0.aar/dd15ac3bbe4880c3f7a508c5f798fbf2/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence.room:runtime:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/401a345599e36fe4212fc53cac3c8020/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence.room:runtime:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/401a345599e36fe4212fc53cac3c8020/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/45336687b8d35f2dc56c15bb96c7f07b/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/45336687b8d35f2dc56c15bb96c7f07b/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:support-fragment:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/30f0b5b29e5016e62fa9dc9b51f0492b/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/30f0b5b29e5016e62fa9dc9b51f0492b/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/e93d8bed08325eb1787ab839feb04ea8/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/e93d8bed08325eb1787ab839feb04ea8/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/a6f37be818a827546b1ca7cf8278de95/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/a6f37be818a827546b1ca7cf8278de95/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b3b1a7ebcf5d2bd258c0a09e1cddddc8/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b3b1a7ebcf5d2bd258c0a09e1cddddc8/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/adf404190fc9136390dee72e5be6cdd4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/adf404190fc9136390dee72e5be6cdd4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b4b6aecdf9d2c161b5f9ee034327c092/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b4b6aecdf9d2c161b5f9ee034327c092/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9a76ef4c8b7f3dd14fdb0d7bb2c88a50/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9a76ef4c8b7f3dd14fdb0d7bb2c88a50/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.core:runtime:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/1f225f13a9db237b7c3c7ede326275d8/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.core:runtime:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/1f225f13a9db237b7c3c7ede326275d8/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence:db-framework:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/db-framework-1.0.0.aar/ddd2d56c40651a8ffc7b9e2e4ff1bfc6/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence:db-framework:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/db-framework-1.0.0.aar/ddd2d56c40651a8ffc7b9e2e4ff1bfc6/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence:db:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/db-1.0.0.aar/e1dd841dd83195670734d8ad4b20a2bd/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence:db:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/db-1.0.0.aar/e1dd841dd83195670734d8ad4b20a2bd/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/scaleup/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/1f272977dc779c6f71a0c5b649b96c5d/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/scaleup/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/1f272977dc779c6f71a0c5b649b96c5d/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/scaleup/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/b88c5183ed227bc69ee03551a0d21abd/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/scaleup/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/b88c5183ed227bc69ee03551a0d21abd/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/382cbc9adb0e5b8f93c578d940780460/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/382cbc9adb0e5b8f93c578d940780460/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/4053cb851f0d8dd68490db85433f5a1d/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/4053cb851f0d8dd68490db85433f5a1d/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/9c695e575cd3089c36431ab1255d6af9/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/9c695e575cd3089c36431ab1255d6af9/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/441d5e1a70386ddaed563dc5ce4b7180/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/441d5e1a70386ddaed563dc5ce4b7180/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/138cd3d0b0c4a007a32287b8ad5e222f/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/138cd3d0b0c4a007a32287b8ad5e222f/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/30f0b5b29e5016e62fa9dc9b51f0492b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/30f0b5b29e5016e62fa9dc9b51f0492b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/e93d8bed08325eb1787ab839feb04ea8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/e93d8bed08325eb1787ab839feb04ea8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/a6f37be818a827546b1ca7cf8278de95/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/a6f37be818a827546b1ca7cf8278de95/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b3b1a7ebcf5d2bd258c0a09e1cddddc8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b3b1a7ebcf5d2bd258c0a09e1cddddc8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/adf404190fc9136390dee72e5be6cdd4/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/adf404190fc9136390dee72e5be6cdd4/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b4b6aecdf9d2c161b5f9ee034327c092/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b4b6aecdf9d2c161b5f9ee034327c092/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9a76ef4c8b7f3dd14fdb0d7bb2c88a50/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9a76ef4c8b7f3dd14fdb0d7bb2c88a50/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:27:13-51
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/45336687b8d35f2dc56c15bb96c7f07b/AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/45336687b8d35f2dc56c15bb96c7f07b/AndroidManifest.xml:27:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/45336687b8d35f2dc56c15bb96c7f07b/AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/45336687b8d35f2dc56c15bb96c7f07b/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/45336687b8d35f2dc56c15bb96c7f07b/AndroidManifest.xml:26:13-83
