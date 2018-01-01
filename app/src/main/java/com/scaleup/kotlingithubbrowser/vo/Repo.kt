@@ -11,7 +11,7 @@ import android.support.annotation.NonNull
  * Using name/owner_login as primary key instead of id since name/owner_login is always available
  * vs id is not.
  */
-@Entity(indices = [(Index(value = ["id"],unique = true)), (Index("owner_login"))], primaryKeys = ["name", "owner_login" ])
+@Entity(tableName = "repo",indices = [(Index(value = ["id"],unique = true)), (Index("owner_login"))], primaryKeys = ["name", "owner_login" ])
 data class Repo(
         val id: Int,
         @field:SerializedName("name")
