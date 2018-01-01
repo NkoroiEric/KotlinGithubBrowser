@@ -14,6 +14,7 @@ class CountingAppExecutors {
 
     private val appExecutors : AppExecutors
 
+
     init {
         val increment = Runnable {
             synchronized(LOCK){
@@ -34,6 +35,10 @@ class CountingAppExecutors {
                 CountingExecutors(increment, decrement),
                 CountingExecutors(increment, decrement),
                 CountingExecutors(increment, decrement))
+    }
+
+    fun getAppExecutors(): AppExecutors{
+        return appExecutors
     }
 
 
