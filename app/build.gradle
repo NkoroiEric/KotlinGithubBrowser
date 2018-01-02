@@ -57,7 +57,6 @@ dependencies {
     implementation deps.support.annotations
     implementation deps.constraint_layout
 
-
     //arch
     implementation deps.arch_core.testing
 
@@ -75,6 +74,7 @@ dependencies {
     //kotlin
     implementation deps.kotlin.stdlib
     implementation deps.kotlin.test
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.2.10"
 
     //dagger
     implementation deps.dagger.runtime
@@ -93,6 +93,7 @@ dependencies {
 
     //mockito
     testImplementation deps.mockito.core
+    testImplementation "com.nhaarman:mockito-kotlin:1.5.0"
 
     //unit tests
     testImplementation deps.junit

@@ -6,7 +6,8 @@ import com.google.gson.annotations.SerializedName
 import android.arch.persistence.room.ForeignKey.CASCADE
 
 
-@Entity(primaryKeys = [ "repoName", "repoOwner", "login" ],
+@Entity( tableName = "contributor",
+        primaryKeys = [ "repoName", "repoOwner", "login" ],
         foreignKeys =
         [ForeignKey(
                 entity = Repo::class,

@@ -80,7 +80,7 @@ internal constructor(private val appExecutors: AppExecutors) {
     }
 
     @WorkerThread
-    protected fun processResponse(response: ApiResponse<RequestType>): RequestType? {
+    open protected fun processResponse(response: ApiResponse<RequestType>): RequestType? {
         return response.body
     }
 

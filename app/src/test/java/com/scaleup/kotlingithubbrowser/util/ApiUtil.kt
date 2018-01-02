@@ -13,7 +13,7 @@ object ApiUtil {
 
     fun <T> createCall(response: Response<T>): LiveData<ApiResponse<T>> {
         val data = MutableLiveData<ApiResponse<T>>()
-        data.setValue(ApiResponse(response))
+        data.value = ApiResponse(response)
         return data
     }
 }
