@@ -5,6 +5,7 @@ import android.arch.persistence.room.Room
 import android.content.Context
 import com.scaleup.kotlingithubbrowser.db.GithubDb
 import com.scaleup.kotlingithubbrowser.db.RepoDao
+import com.scaleup.kotlingithubbrowser.db.UserDao
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -25,5 +26,10 @@ class AppModule {
     @Provides @Singleton
     fun provideRepoDao(githubDb: GithubDb): RepoDao{
         return githubDb.repoDao()
+    }
+
+    @Provides @Singleton
+    fun provideUserDao(githubDb: GithubDb): UserDao{
+        return githubDb.userDao()
     }
 }

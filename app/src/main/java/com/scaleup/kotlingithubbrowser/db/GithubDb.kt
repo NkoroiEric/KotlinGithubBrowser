@@ -14,4 +14,5 @@ Contributor::class,
 RepoSearchResult::class], version = 1)
 abstract class GithubDb : RoomDatabase() {
     abstract fun repoDao() : RepoDao
+    abstract fun userDao(): UserDao
 }
