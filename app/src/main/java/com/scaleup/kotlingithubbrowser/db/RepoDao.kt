@@ -69,4 +69,7 @@ abstract class RepoDao {
     @Query("select * from repo where id in (:repoIds)")
     abstract fun loadById(repoIds: List<Int>): LiveData<List<Repo>>
 
+    @Query("select * from repo where owner_login = :login order by stars DESC")
+    abstract fun loadRepositories(login: String): LiveData<List<Repo>>
+
 }

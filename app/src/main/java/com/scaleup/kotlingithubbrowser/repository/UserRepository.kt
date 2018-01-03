@@ -13,9 +13,10 @@ import javax.inject.Singleton
 
 @Singleton
 class UserRepository @Inject constructor(instantExecutorRule: AppExecutors, userDao: UserDao, service: GithubService) {
-    val appExecutors = instantExecutorRule
-    val userDao = userDao
-    val service = service
+    private val appExecutors = instantExecutorRule
+    private val userDao = userDao
+    private val service = service
+
 
     fun loadUser(query: String) :LiveData<Resource<User>> {
         return object :NetworkBoundResource<User, User>(appExecutors){

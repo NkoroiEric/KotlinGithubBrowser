@@ -1,10 +1,7 @@
 package com.scaleup.kotlingithubbrowser.repository
 
-import android.arch.core.util.Function
 import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.Observer
 import android.arch.lifecycle.Transformations
-import android.util.Log
 import com.scaleup.kotlingithubbrowser.AppExecutors
 import com.scaleup.kotlingithubbrowser.api.ApiResponse
 import com.scaleup.kotlingithubbrowser.api.GithubService
@@ -30,16 +27,16 @@ import javax.inject.Singleton
  */
 @Singleton
 class RepoRepository @Inject constructor(instantAppExecutors: AppExecutors, db: GithubDb, dao: RepoDao, service: GithubService){
-    val appExecutors = instantAppExecutors
-    val db = db
-    val dao = dao
-    val service = service
+    private val appExecutors = instantAppExecutors
+    private val githubDb = db
+    private val repoDao = dao
+    private val githubService = service
     private val repoListRateLimit = RateLimiter<String>(10, TimeUnit.MINUTES)
 
     fun loadRepo(owner: String, name: String): LiveData<Resource<Repo>> {
         return object : NetworkBoundResource<Repo, Repo>(appExecutors){
             override fun saveCallResult(item: Repo?) {
-                item?.let {  dao.insert(it) }
+                item?.let {  repoDao.insert(it) }
             }
 
             override fun shouldFetch(data: Repo?): Boolean {
@@ -47,11 +44,11 @@ class RepoRepository @Inject constructor(instantAppExecutors: AppExecutors, db: 
             }
 
             override fun loadFromDb(): LiveData<Repo> {
-                return dao.load(owner, name)
+                return repoDao.load(owner, name)
             }
 
             override fun createCall(): LiveData<ApiResponse<Repo>> {
-                return service.getRepo(owner,name)
+                return githubService.getRepo(owner,name)
             }
 
         }.asLiveData()
@@ -64,36 +61,36 @@ class RepoRepository @Inject constructor(instantAppExecutors: AppExecutors, db: 
                     contributor.repoName = name
                     contributor.repoOwner = owner
                 }
-                db.beginTransaction()
+                githubDb.beginTransaction()
                 try {
-                    dao.createRepoIfNotExist(Repo(Repo.UNKNOWN_ID,
+                    repoDao.createRepoIfNotExist(Repo(Repo.UNKNOWN_ID,
                             name, owner + "/" + name, "",
                             Repo.Owner(owner, null), 0))
-                    dao.insertContributors(contributors)
-                    db.setTransactionSuccessful()
+                    repoDao.insertContributors(contributors)
+                    githubDb.setTransactionSuccessful()
                 } finally {
-                    db.endTransaction()
+                    githubDb.endTransaction()
                 }
             }
 
             override fun shouldFetch(data: List<Contributor>?): Boolean {
-                println("rece contributor list from db: $data")
+                println("rece contributor list from githubDb: $data")
                 return data == null || data.isEmpty()
             }
 
             override fun loadFromDb(): LiveData<List<Contributor>> {
-                return dao.loadContributors(owner, name)
+                return repoDao.loadContributors(owner, name)
             }
 
             override fun createCall(): LiveData<ApiResponse<List<Contributor>>> {
-                return service.getContributors(owner, name)
+                return githubService.getContributors(owner, name)
             }
 
         }.asLiveData()
     }
 
     fun searchNextPage(query: String): LiveData<Resource<Boolean>> {
-        val fetchNextSearchPageTask = FetchNextSearchPageTask(query, service,db)
+        val fetchNextSearchPageTask = FetchNextSearchPageTask(query, githubService, githubDb)
         appExecutors.networkIO().execute(fetchNextSearchPageTask)
         return fetchNextSearchPageTask.getLiveData()
     }
@@ -104,13 +101,13 @@ class RepoRepository @Inject constructor(instantAppExecutors: AppExecutors, db: 
                 val repoIds = item!!.repoIds
                 val repoSearchResult = RepoSearchResult(
                         query, repoIds, item.total,item.nextPage)
-                db.beginTransaction()
+                githubDb.beginTransaction()
                 try {
-                    dao.insertRepos(item.items)
-                    dao.insert(repoSearchResult)
-                    db.setTransactionSuccessful()
+                    repoDao.insertRepos(item.items)
+                    repoDao.insert(repoSearchResult)
+                    githubDb.setTransactionSuccessful()
                 } finally {
-                    db.endTransaction()
+                    githubDb.endTransaction()
                 }
             }
 
@@ -119,17 +116,17 @@ class RepoRepository @Inject constructor(instantAppExecutors: AppExecutors, db: 
             }
 
             override fun loadFromDb(): LiveData<List<Repo>> {
-                return Transformations.switchMap(dao.search(query), { searchData ->
+                return Transformations.switchMap(repoDao.search(query), { searchData ->
                     if (searchData == null){
                         AbsentLiveData.create()
                     }else{
-                        dao.loadOrdered(searchData.repoIds)
+                        repoDao.loadOrdered(searchData.repoIds)
                     }
                 })
             }
 
             override fun createCall(): LiveData<ApiResponse<RepoSearchResponse>> {
-                return service.searchRepos(query)
+                return githubService.searchRepos(query)
             }
 
             override fun processResponse(response: ApiResponse<RepoSearchResponse>): RepoSearchResponse{
@@ -143,7 +140,32 @@ class RepoRepository @Inject constructor(instantAppExecutors: AppExecutors, db: 
         }.asLiveData()
     }
 
+    fun loadRepos(login: String): LiveData<Resource<List<Repo>>> {
+        return object : NetworkBoundResource<List<Repo>, List<Repo>>(appExecutors){
+            override fun saveCallResult(item: List<Repo>?) {
+                if (item != null){
+                    repoDao.insertRepos(item.toMutableList())
+                }
+            }
 
+            override fun shouldFetch(data: List<Repo>?): Boolean {
+                return data == null || data.isEmpty() || repoListRateLimit.shouldFetch(login)
+            }
+
+            override fun loadFromDb(): LiveData<List<Repo>> {
+                return repoDao.loadRepositories(login)
+            }
+
+            override fun createCall(): LiveData<ApiResponse<List<Repo>>> {
+                return  githubService.getRepos(login)
+            }
+
+            override fun onFetchFailed(){
+                repoListRateLimit.reset(login)
+            }
+
+        }.asLiveData()
+    }
 
 
 }
