@@ -24,7 +24,7 @@
                 name="userResource"
                 type="com.scaleup.kotlingithubbrowser.vo.Resource"/>
         <variable name="retryCallback"
-                  type="com.android.example.github.ui.common.RetryCallback"/>
+                  type="com.scaleup.kotlingithubbrowser.ui.common.RetryCallback"/>
     </data>
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"

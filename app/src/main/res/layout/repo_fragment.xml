@@ -31,7 +31,7 @@
             name="contributorsStatus"
             type="com.scaleup.kotlingithubbrowser.vo.Status"/>
         <variable name="retryCallback"
-                  type="com.android.example.github.ui.common.RetryCallback"/>
+                  type="com.scaleup.kotlingithubbrowser.ui.common.RetryCallback"/>
     </data>
     <android.support.constraint.ConstraintLayout
             android:orientation="vertical" android:layout_width="match_parent"

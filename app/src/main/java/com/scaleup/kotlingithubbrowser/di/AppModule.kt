@@ -3,15 +3,30 @@ package com.scaleup.kotlingithubbrowser.di
 import android.app.Application
 import android.arch.persistence.room.Room
 import android.content.Context
+import com.scaleup.kotlingithubbrowser.api.GithubService
 import com.scaleup.kotlingithubbrowser.db.GithubDb
 import com.scaleup.kotlingithubbrowser.db.RepoDao
 import com.scaleup.kotlingithubbrowser.db.UserDao
+import com.scaleup.kotlingithubbrowser.util.LiveDataCallAdapter
+import com.scaleup.kotlingithubbrowser.util.LiveDataCallAdapterFactory
 import dagger.Module
 import dagger.Provides
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-@Module
+@Module(includes = [ViewModelModule::class])
 class AppModule {
+
+    @Provides @Singleton
+    fun provideGithubService() : GithubService{
+        return Retrofit.Builder()
+                .baseUrl("http://org.github.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(LiveDataCallAdapterFactory())
+                .build()
+                .create(GithubService::class.java)
+    }
 
     @Provides @Singleton
     fun provideContext(application: Application): Context{

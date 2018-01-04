@@ -51,8 +51,13 @@ jacoco {
     toolVersion = "0.7.4+"
 }
 
+
+afterEvaluate {
+    tasks['kaptDebugKotlin'].dependsOn('transformDataBindingWithDataBindingMergeArtifactsForDebug')
+}
+
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation deps.support.app_compat
     implementation deps.support.recyclerview
     implementation deps.support.cardview
@@ -60,26 +65,22 @@ dependencies {
     implementation deps.support.v4
     implementation deps.support.annotations
     implementation deps.constraint_layout
-
     //arch
     implementation deps.arch_core.testing
-
     //room
+    implementation 'com.android.support:support-v4:26.1.0'
     kapt deps.room.compiler
     implementation deps.room.runtime
     implementation deps.room.rxjava2
     implementation deps.room.testing
-
     //lifecycle
     implementation deps.lifecycle.runtime
     implementation deps.lifecycle.extensions
     kapt deps.lifecycle.compiler
-
     //kotlin
     implementation deps.kotlin.stdlib
     implementation deps.kotlin.test
-    implementation "org.jetbrains.kotlin:kotlin-reflect:1.2.10"
-
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.2.10'
     //dagger
     implementation deps.dagger.runtime
     implementation deps.dagger.android
@@ -91,34 +92,27 @@ dependencies {
     implementation deps.retrofit.runtime
     implementation deps.retrofit.gson
     implementation deps.retrofit.mock
-
     //okhttp
     implementation deps.okhttp_logging_interceptor
-
     //mockito
     testImplementation deps.mockito.core
-    testImplementation "com.nhaarman:mockito-kotlin:1.5.0"
-
+    testImplementation 'com.nhaarman:mockito-kotlin:1.5.0'
     //unit tests
     testImplementation deps.junit
-
     //mock_web_server
     testImplementation deps.mock_web_server
-    testImplementation (deps.arch_core.testing, {
+    testImplementation(deps.arch_core.testing, {
         exclude group: 'com.android.support', module: 'support-compat'
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.android.support', module: 'support-core-utils'
     })
-
     //instrumentation tests
     androidTestImplementation deps.atsl.runner
     androidTestImplementation deps.atsl.rules
-
     //espresso
     androidTestImplementation deps.espresso.core
     androidTestImplementation deps.espresso.intents
     androidTestImplementation deps.espresso.contrib
-
     androidTestImplementation(deps.espresso.core, {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
@@ -127,13 +121,11 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
     })
-
     androidTestImplementation(deps.arch_core.testing, {
     })
     androidTestImplementation deps.dexmaker
     androidTestImplementation deps.mockito.core, { exclude group: 'net.bytebuddy' }
-
-    //databinding
+    //dataBinding
     kapt deps.kotlin.dataBindingAndroid
 }
 

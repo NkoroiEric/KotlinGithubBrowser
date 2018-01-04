@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-22:12
-MERGED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-22:12
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-23:12
+MERGED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-23:12
 MERGED from [com.android.databinding:adapters:3.1.0-alpha06] /home/scaleup/.gradle/caches/transforms-1/files-1.1/adapters-3.1.0-alpha06.aar/b752910eeda5df0c0159e2dd19a3ab19/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.databinding:library:3.1.0-alpha06] /home/scaleup/.gradle/caches/transforms-1/files-1.1/library-3.1.0-alpha06.aar/80c8111c84a3e83103cf17c0e0045f9c/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:17:1-31:12
@@ -42,18 +42,18 @@ INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/debug/AndroidMani
 		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-22:12
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-23:12
 		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/debug/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-22:12
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:1-23:12
 		INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:5:5-20:19
-MERGED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:5:5-20:19
-MERGED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:5:5-20:19
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:5:5-21:19
+MERGED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:5:5-21:19
+MERGED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:5:5-21:19
 MERGED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/b47df77ed9c961eded0384cbe1fb3f4c/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/scaleup/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/382cbc9adb0e5b8f93c578d940780460/AndroidManifest.xml:25:5-29:19
@@ -85,43 +85,46 @@ MERGED from [com.android.support:support-compat:26.1.0] /home/scaleup/.gradle/ca
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/scaleup/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/b88c5183ed227bc69ee03551a0d21abd/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/scaleup/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/b88c5183ed227bc69ee03551a0d21abd/AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:10:9-35
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:8:9-41
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:9:9-41
 	android:roundIcon
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:9:9-54
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:10:9-54
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:10:9-54
 	android:icon
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:7:9-43
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:8:9-43
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:8:9-43
 	android:allowBackup
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:6:9-35
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:7:9-35
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:7:9-35
 	android:theme
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:11:9-40
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:12:9-40
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:12:9-40
+	android:name
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:6:9-34
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:6:9-34
 activity#com.scaleup.kotlingithubbrowser.MainActivity
-ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:12:9-18:20
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:13:9-19:20
 	android:name
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:12:19-47
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:13:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:13:13-17:29
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
-ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:14:17-69
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:16:17-77
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:16:27-74
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:17:27-74
 activity#com.scaleup.kotlingithubbrowser.testing.SingleFragmentActivity
-ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:19:9-67
-MERGED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:19:9-67
-MERGED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:19:9-67
+ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:20:9-67
+MERGED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:20:9-67
+MERGED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:20:9-67
 	android:name
-		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:19:19-65
+		ADDED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml:20:19-65
 uses-sdk
 INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/scaleup/github/KotlinGithubBrowser/app/src/main/AndroidManifest.xml

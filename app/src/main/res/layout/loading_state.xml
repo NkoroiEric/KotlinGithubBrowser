@@ -21,7 +21,7 @@
         <import type="com.scaleup.kotlingithubbrowser.vo.Resource"/>
         <import type="com.scaleup.kotlingithubbrowser.vo.Status"/>
         <variable name="resource" type="Resource"/>
-        <variable name="callback" type="com.android.example.github.ui.common.RetryCallback"/>
+        <variable name="callback" type="com.scaleup.kotlingithubbrowser.ui.common.RetryCallback"/>
     </data>
     <LinearLayout android:orientation="vertical"
                   app:visibleGone="@{resource.data == null}"

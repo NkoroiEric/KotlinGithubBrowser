@@ -1,10 +1,12 @@
 package com.scaleup.kotlingithubbrowser.di
 
 import android.app.Application
+import com.scaleup.kotlingithubbrowser.GithubApp
 import dagger.BindsInstance
 import dagger.Component
+import dagger.android.AndroidInjectionModule
 
-@Component(modules = [AppModule::class])
+@Component(modules = [AndroidInjectionModule::class,AppModule::class, MainActivityModule::class])
 interface AppComponent {
     @Component.Builder
     interface Builder{
@@ -13,7 +15,8 @@ interface AppComponent {
         *subcomponent builder that allows an instance to be bound
          *to some type within the component ie @BindsInstance
          */
-        @BindsInstance fun inject(application: Application) :Builder
+        @BindsInstance fun application(application: Application) :Builder
         fun build():AppComponent
     }
+    fun inject(app : GithubApp)
 }

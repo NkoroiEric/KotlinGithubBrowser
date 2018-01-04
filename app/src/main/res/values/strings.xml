@@ -8,4 +8,7 @@
     <string name="repo_full_name"><b>%s</b>/%s</string>
     <string name="empty_search_result">No results for <b>%s</b></string>
     <string name="a11y_contributor_avatar">contributor avatar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
