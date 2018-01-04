@@ -16,7 +16,7 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.android.example.github.util.GithubTestRunner"
     }
     buildTypes {
         debug {
@@ -40,6 +40,10 @@ android {
     }
     lintOptions {
         lintConfig rootProject.file('lint.xml')
+    }
+
+    configurations.all {
+        resolutionStrategy.force deps.mockito.core
     }
 }
 
@@ -132,6 +136,7 @@ dependencies {
     //databinding
     kapt deps.kotlin.dataBindingAndroid
 }
+
 
 
 task fullCoverageReport(type: JacocoReport) {
