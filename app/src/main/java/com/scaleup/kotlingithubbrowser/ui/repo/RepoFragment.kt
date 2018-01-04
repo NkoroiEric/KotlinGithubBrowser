@@ -1,6 +1,10 @@
 package com.scaleup.kotlingithubbrowser.ui.repo
 
+import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProvider
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
+import android.databinding.DataBindingUtil
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -9,95 +13,86 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.scaleup.kotlingithubbrowser.R
+import com.scaleup.kotlingithubbrowser.binding.FragmentDataBindingComponent
+import com.scaleup.kotlingithubbrowser.databinding.ContributorItemBinding
+import com.scaleup.kotlingithubbrowser.databinding.RepoFragmentBinding
 import com.scaleup.kotlingithubbrowser.di.Injectable
+import com.scaleup.kotlingithubbrowser.ui.common.NavigationController
+import com.scaleup.kotlingithubbrowser.ui.common.RetryCallback
+import com.scaleup.kotlingithubbrowser.ui.repo.ContributorAdapter.*
+import com.scaleup.kotlingithubbrowser.util.AutoClearedValue
+import com.scaleup.kotlingithubbrowser.vo.Contributor
+import javax.inject.Inject
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [RepoFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [RepoFragment.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
 class RepoFragment : Fragment() , Injectable{
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-    private var listener: OnFragmentInteractionListener? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    @Inject lateinit var viewModelFactory : ViewModelProvider.Factory
+    //lazily init viewmodel and no need for thread safety since it
+    //always called from main thread
+    private val repoViewModel  by lazy(LazyThreadSafetyMode.NONE) {
+        ViewModelProviders.of(this, viewModelFactory).get(RepoViewModel::class.java)
+    }
+
+    private lateinit var binding : AutoClearedValue<RepoFragmentBinding>
+    private lateinit var adapter : AutoClearedValue<ContributorAdapter>
+    @Inject lateinit var navigationController : NavigationController
+
+    val dataBindingComponent = FragmentDataBindingComponent(this)
+
+    private val REPO_OWNER_KEY = "repo_owner"
+    private val REPO_NAME_KEY = "repo_name"
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            if(it.keySet().containsAll(listOf(REPO_NAME_KEY, REPO_OWNER_KEY))){
+                repoViewModel.setId(it.getString(REPO_OWNER_KEY), it.getString(REPO_NAME_KEY))
+            }else {
+                repoViewModel.setId(null, null)
+            }
         }
+
+        val repo = repoViewModel.repo
+        repo.observe(this, Observer { r ->
+            binding.get()!!.repo = r!!.data
+            binding.get()!!.repoResource = r
+            binding.get()!!.executePendingBindings()
+        })
+
+        val adapter = ContributorAdapter(dataBindingComponent,object : ContributorClickCallback{
+            override fun onClick(contributor: Contributor) {
+                navigationController.navigateToUser(contributor.login)
+            }
+        })
+        this.adapter = AutoClearedValue(this, adapter)
+        binding.get()?.contributorList?.adapter = adapter
+        initContributorList(repoViewModel)
+    }
+
+    fun initContributorList(repoViewModel: RepoViewModel){
+        repoViewModel.contributors.observe(this, Observer{listResource ->
+            // we don't need any null checks here for the adapter since LiveData guarantees that
+            // it won't call us if fragment is stopped or not started.
+            if (listResource != null && listResource.data != null){
+                adapter.get()?.replace(listResource.data)
+            }else {
+                //constant condition
+                adapter.get()?.replace(emptyList())
+            }
+        })
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return TextView(activity).apply {
-            setText(R.string.hello_blank_fragment)
-        }
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            listener = context
-        } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-        }
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson [Communicating with Other Fragments]
-     * (http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
-    interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun onFragmentInteraction(uri: Uri)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RepoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-                RepoFragment().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_PARAM1, param1)
-                        putString(ARG_PARAM2, param2)
-                    }
+        val dataBinding:RepoFragmentBinding? = DataBindingUtil.inflate<RepoFragmentBinding>(inflater, R.layout.repo_fragment, container, false)
+        dataBinding?.let {
+            it.retryCallback = object : RetryCallback{
+                override fun retry() {
+                    repoViewModel.retry()
                 }
+            }
+            binding = AutoClearedValue(this, dataBinding)
+        }
+        return dataBinding?.root
     }
 }

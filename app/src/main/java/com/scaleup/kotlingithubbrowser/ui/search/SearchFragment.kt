@@ -1,6 +1,7 @@
 package com.scaleup.kotlingithubbrowser.ui.search
 
 import android.content.Context
+import android.databinding.DataBindingUtil
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -9,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.scaleup.kotlingithubbrowser.R
+import com.scaleup.kotlingithubbrowser.databinding.SearchFragmentBinding
 import com.scaleup.kotlingithubbrowser.di.Injectable
 
 // TODO: Rename parameter arguments, choose names that match
@@ -41,9 +43,8 @@ class SearchFragment : Fragment() , Injectable{
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return TextView(activity).apply {
-            setText(R.string.hello_blank_fragment)
-        }
+        val dataBinding = DataBindingUtil.inflate<SearchFragmentBinding>(inflater, R.layout.search_fragment, container, false)
+        return dataBinding?.root
     }
 
     // TODO: Rename method, update argument and hook method into UI event

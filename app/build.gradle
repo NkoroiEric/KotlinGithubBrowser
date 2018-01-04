@@ -88,6 +88,9 @@ dependencies {
     kapt deps.dagger.android_support_compiler
     kapt deps.dagger.compiler
 
+    //glide
+    implementation deps.glide
+
     //retrofit
     implementation deps.retrofit.runtime
     implementation deps.retrofit.gson
