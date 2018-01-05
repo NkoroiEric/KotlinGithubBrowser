@@ -20,7 +20,7 @@ class SearchViewModel @Inject constructor(repoRepository: RepoRepository): ViewM
     private val query = MutableLiveData<String>()
     private val nextPageHandler : NextPageHandler = NextPageHandler(repoRepository)
     @VisibleForTesting
-    internal val results : LiveData<Resource<List<Repo>>> =
+    val results : LiveData<Resource<List<Repo>>> =
             Transformations.switchMap(query) { input ->
                 if (input == null || input.trim().isEmpty()){
                     AbsentLiveData.create()
@@ -52,27 +52,26 @@ class SearchViewModel @Inject constructor(repoRepository: RepoRepository): ViewM
         if (query.value != null) query.value = query.value
     }
 
-    class LoadMoreState(running: Boolean, errorM: String?){
-        internal val errorMessage = errorM
+    class LoadMoreState(val isRunning: Boolean, val errorMessage: String?) {
         private var handledError = false
-        val isRunning = running
 
-
-
-        fun getErrorMessageIfNotHandled(): String {
-            if (handledError) return ""
-            handledError = true
-            return errorMessage?:"error message is empty"
-        }
+        val errorMessageIfNotHandled: String?
+            get() {
+                if (handledError) {
+                    return null
+                }
+                handledError = true
+                return errorMessage
+            }
     }
 
     @VisibleForTesting
-    class NextPageHandler(repoRepository: RepoRepository) : Observer<Resource<Boolean>>{
+    class NextPageHandler constructor(private val repoRepo: RepoRepository) : Observer<Resource<Boolean>>{
         private var nextPageLiveData : LiveData<Resource<Boolean>>? = null
         @VisibleForTesting
-        internal val loadMoreState = MutableLiveData<LoadMoreState>()
+        val loadMoreState = MutableLiveData<LoadMoreState>()
         private var query : String? = null
-        private val repository: RepoRepository = repoRepository
+        private val repository: RepoRepository = repoRepo
         @VisibleForTesting
         var hasMore : Boolean = false
 
@@ -87,7 +86,7 @@ class SearchViewModel @Inject constructor(repoRepository: RepoRepository): ViewM
             nextPageLiveData = repository.searchNextPage(query)
             loadMoreState.value = LoadMoreState(true, null)
             //noinspection ConstantConditions
-            nextPageLiveData?.observeForever(this)
+            nextPageLiveData!!.observeForever(this)
         }
 
 

@@ -43,6 +43,7 @@ class ApiResponse<T>  {
         code = response.code()
         if (response.isSuccessful){
             body = response.body()
+            println(body)
             errorMessage = null
         }else {
             body = null

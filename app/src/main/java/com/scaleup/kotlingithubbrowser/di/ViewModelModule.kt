@@ -14,19 +14,21 @@ import dagger.multibindings.IntoMap
 abstract class ViewModelModule {
     @Binds
     @IntoMap
-    @ViewModelKey(SearchViewModel::class)
-    abstract fun bindSearchViewModel(searchViewModel: SearchViewModel) : ViewModel
+    @ViewModelKey(UserViewModel::class)
+    abstract fun bindUserViewModel(userViewModel: UserViewModel): ViewModel
 
     @Binds
     @IntoMap
-    @ViewModelKey(UserViewModel::class)
-    abstract fun bindUserViewModel(userViewModel: UserViewModel) : ViewModel
+    @ViewModelKey(SearchViewModel::class)
+    abstract fun bindSearchViewModel(searchViewModel: SearchViewModel): ViewModel
 
     @Binds
     @IntoMap
     @ViewModelKey(RepoViewModel::class)
-    abstract fun bindRepoViewModel(repoViewModel: RepoViewModel) : ViewModel
+    abstract fun bindRepoViewModel(repoViewModel: RepoViewModel): ViewModel
+
 
     @Binds
-    abstract fun bindViewModelFactory(githubViewModelFactory: GithubViewModelFactory) : ViewModelProvider.Factory
+    abstract fun bindViewModelFactory(factory: GithubViewModelFactory): ViewModelProvider.Factory
+
 }

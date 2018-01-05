@@ -43,54 +43,59 @@ abstract class DataBoundListAdapter<T, V : ViewDataBinding> : RecyclerView.Adapt
     @MainThread
     fun replace(update: List<T>?) {
         dataVersion++
-        if (items == null) {
-            if (update == null) {
-                return
+        when {
+            items == null -> {
+                if (update == null) {
+                    return
+                }
+                items = update
+                notifyDataSetChanged()
             }
-            items = update
-            notifyDataSetChanged()
-        } else if (update == null) {
-            val oldSize = items!!.size
-            items = null
-            notifyItemRangeRemoved(0, oldSize)
-        } else {
-            val startVersion = dataVersion
-            val oldItems = items
-            object : AsyncTask<Void, Void, DiffUtil.DiffResult>() {
-                override fun doInBackground(vararg voids: Void): DiffUtil.DiffResult {
-                    return DiffUtil.calculateDiff(object : DiffUtil.Callback() {
-                        override fun getOldListSize(): Int {
-                            return oldItems!!.size
-                        }
+            update == null -> {
+                val oldSize = items!!.size
+                items = null
+                notifyItemRangeRemoved(0, oldSize)
+            }
+            else -> {
+                val startVersion = dataVersion
+                val oldItems = items
+                object : AsyncTask<Void, Void, DiffUtil.DiffResult>() {
+                    override fun doInBackground(vararg voids: Void): DiffUtil.DiffResult {
+                        return DiffUtil.calculateDiff(object : DiffUtil.Callback() {
+                            override fun getOldListSize(): Int {
+                                return oldItems!!.size
+                            }
 
-                        override fun getNewListSize(): Int {
-                            return update.size
-                        }
+                            override fun getNewListSize(): Int {
+                                println("New Size: ${update.size}")
+                                return update.size
+                            }
 
-                        override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                            val oldItem = oldItems!![oldItemPosition]
-                            val newItem = update[newItemPosition]
-                            return this@DataBoundListAdapter.areItemsTheSame(oldItem, newItem)
-                        }
+                            override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+                                val oldItem = oldItems!![oldItemPosition]
+                                val newItem = update[newItemPosition]
+                                return this@DataBoundListAdapter.areItemsTheSame(oldItem, newItem)
+                            }
 
-                        override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                            val oldItem = oldItems!![oldItemPosition]
-                            val newItem = update[newItemPosition]
-                            return this@DataBoundListAdapter.areContentsTheSame(oldItem, newItem)
-                        }
-                    })
-                }
-
-                override fun onPostExecute(diffResult: DiffUtil.DiffResult) {
-                    if (startVersion != dataVersion) {
-                        // ignore update
-                        return
+                            override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+                                val oldItem = oldItems!![oldItemPosition]
+                                val newItem = update[newItemPosition]
+                                return this@DataBoundListAdapter.areContentsTheSame(oldItem, newItem)
+                            }
+                        })
                     }
-                    items = update
-                    diffResult.dispatchUpdatesTo(this@DataBoundListAdapter)
 
-                }
-            }.execute()
+                    override fun onPostExecute(diffResult: DiffUtil.DiffResult) {
+                        if (startVersion != dataVersion) {
+                            // ignore update
+                            return
+                        }
+                        items = update
+                        diffResult.dispatchUpdatesTo(this@DataBoundListAdapter)
+
+                    }
+                }.execute()
+            }
         }
     }
 

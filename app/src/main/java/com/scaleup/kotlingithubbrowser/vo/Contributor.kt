@@ -8,15 +8,15 @@ import android.arch.persistence.room.ForeignKey.CASCADE
 
 @Entity( tableName = "contributor",
         primaryKeys = [ "repoName", "repoOwner", "login" ],
-        foreignKeys =
-        [ForeignKey(
-                entity = Repo::class,
-                parentColumns = [ "name", "owner_login" ],
-                childColumns = [ "repoName", "repoOwner" ],
-                onUpdate = CASCADE, deferred = true)])
+        foreignKeys = [(ForeignKey(entity = Repo::class,
+        parentColumns = arrayOf("name", "owner_login"),
+        childColumns = arrayOf("repoName", "repoOwner"),
+        onUpdate = ForeignKey.CASCADE, deferred = true))])
 data class Contributor(@field:SerializedName("login")
-                       val login: String, @field:SerializedName("contributions")
-                       val contributions: Int, @field:SerializedName("avatar_url")
+                       val login: String,
+                       @field:SerializedName("contributions")
+                       val contributions: Int,
+                       @field:SerializedName("avatar_url")
                        val avatarUrl: String?) {
 
 

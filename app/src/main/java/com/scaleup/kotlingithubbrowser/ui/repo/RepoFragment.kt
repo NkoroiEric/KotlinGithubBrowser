@@ -23,7 +23,8 @@ import com.scaleup.kotlingithubbrowser.ui.repo.ContributorAdapter.*
 import com.scaleup.kotlingithubbrowser.util.AutoClearedValue
 import com.scaleup.kotlingithubbrowser.vo.Contributor
 import javax.inject.Inject
-
+const val REPO_OWNER_KEY = "repo_owner"
+const val REPO_NAME_KEY = "repo_name"
 class RepoFragment : Fragment() , Injectable{
 
     @Inject lateinit var viewModelFactory : ViewModelProvider.Factory
@@ -39,8 +40,7 @@ class RepoFragment : Fragment() , Injectable{
 
     val dataBindingComponent = FragmentDataBindingComponent(this)
 
-    private val REPO_OWNER_KEY = "repo_owner"
-    private val REPO_NAME_KEY = "repo_name"
+
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -64,8 +64,8 @@ class RepoFragment : Fragment() , Injectable{
                 navigationController.navigateToUser(contributor.login)
             }
         })
-        this.adapter = AutoClearedValue(this, adapter)
         binding.get()?.contributorList?.adapter = adapter
+        this.adapter = AutoClearedValue(this, adapter)
         initContributorList(repoViewModel)
     }
 

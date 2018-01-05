@@ -15,13 +15,13 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-@Module(includes = [ViewModelModule::class])
+@Module
 class AppModule {
 
     @Provides @Singleton
     fun provideGithubService() : GithubService{
         return Retrofit.Builder()
-                .baseUrl("http://org.github.com/")
+                .baseUrl("https://api.github.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(LiveDataCallAdapterFactory())
                 .build()
